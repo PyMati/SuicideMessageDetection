@@ -3,10 +3,15 @@ from detector.detector import Detector
 
 
 def main():
-    str_ = "It was just very boring that and my friends was just not respectable for me"
+    message: str
     prcs = Preprocessor()
     detector = Detector(prcs)
-    print(detector.predict(str_))
+    print("Paste message which you got.")
+    while True:
+        message = input("")
+        if message == "exit":
+            break
+        print(detector.predict(message))
 
 
 if __name__ == "__main__":
